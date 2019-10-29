@@ -1,0 +1,51 @@
+//plugins {
+//    id("AndroidXPlugin")
+//    id("com.android.application")
+//}
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.android.supportv4"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+dependencies {
+
+    implementation "androidx.core:core:1.1.0"
+    implementation "androidx.cursoradapter:cursoradapter:1.0.0"
+    implementation "androidx.localbroadcastmanager:localbroadcastmanager:1.0.0"
+    implementation "androidx.slidingpanelayout:slidingpanelayout:1.0.0"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+    implementation "androidx.legacy:legacy-support-core-utils:1.0.0"
+    implementation "androidx.fragment:fragment:1.1.0"
+    implementation "androidx.media:media:1.1.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0-beta01"
+//    implementation(project(":core:core"))
+//    implementation(project(":cursoradapter"))
+//    implementation(project(":localbroadcastmanager"))
+//    implementation(project(":slidingpanelayout"))
+//    implementation(project(":swiperefreshlayout"))
+//    implementation(project(":legacy-support-core-utils"))
+//    implementation(project(":fragment:fragment"))
+//    implementation(project(":media"))
+//    implementation(project(":lifecycle:lifecycle-extensions"))
+}

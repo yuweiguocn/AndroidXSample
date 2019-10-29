@@ -1,0 +1,75 @@
+//import static androidx.build.dependencies.DependenciesKt.KOTLIN_STDLIB
+//
+//plugins {
+//    id("AndroidXPlugin")
+//    id("com.android.application")
+//    id("kotlin-android")
+//}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+        applicationId "com.example.android.supportv7"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        disable "WrongThread"
+        // TODO: Enable lint after appcompat:1.1.0 release or use lint-baseline.xml instead.
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    api 'com.google.android.material:material:1.0.0'
+    implementation "androidx.appcompat:appcompat:1.1.0"
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.core:core:1.1.0"
+    implementation "androidx.gridlayout:gridlayout:1.0.0"
+    implementation "androidx.mediarouter:mediarouter:1.1.0"
+    implementation "androidx.palette:palette:1.0.0"
+    implementation "androidx.recyclerview:recyclerview:1.1.0-beta05"
+    implementation "androidx.recyclerview:recyclerview-selection:1.0.0"
+    implementation "androidx.drawerlayout:drawerlayout:1.0.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.3.31"
+//    implementation(project(":appcompat"))
+//    implementation(project(":cardview"))
+//    implementation(project(":core:core"))
+//    implementation(project(":gridlayout"))
+//    implementation(project(":mediarouter"))
+//    implementation(project(":palette:palette"))
+//    implementation(project(":recyclerview:recyclerview"))
+//    implementation project(":recyclerview:recyclerview-selection")
+//    implementation(project(":core:core"))
+//    implementation project(':drawerlayout')
+//    api(KOTLIN_STDLIB)
+}
+
+//android {
+//    defaultConfig {
+//        vectorDrawables.useSupportLibrary = true
+//    }
+//    lintOptions {
+//        disable "WrongThread"
+//        // TODO: Enable lint after appcompat:1.1.0 release or use lint-baseline.xml instead.
+//        abortOnError false
+//    }
+//}

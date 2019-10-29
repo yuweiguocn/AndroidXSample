@@ -1,0 +1,2 @@
+include ':app', ':SupportEmojiDemos', ':SupportContentDemos', ':SupportLeanbackDemos', ':SupportVectorDrawableDemos', ':SupportPreferenceDemos', ':SupportTransitionDemos', ':Support4Demos', ':Support7Demos', ':SupportAnimationDemos', ':SupportSliceDemos', ':SupportRemoteCallbackDemos', ':slices-test'
+rootProject.name='AndroidXDemo'
